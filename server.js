@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/nodeappdatabase', {
+mongoose.connect('mongo ds161780.mlab.com:61780/taskkodilla -u <bobeksob> -p <grzesiek97!>', {
     useMongoClient: true
 });
 
@@ -156,3 +156,5 @@ Promise.all([kenny.save(), mark.save(), benny.save()])
     .catch(console.log.bind(console))
 
     //lol
+
+    
