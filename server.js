@@ -27,6 +27,7 @@ userSchema.pre('save', function(next) {
     const currentDate = new Date();
 
     //zmiana pola na aktualny czas
+    
     this.updated_at = currentDate;
 
     if (!this.created_at)
