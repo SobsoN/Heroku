@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/nodeappdatabase', {
-    useMongoClient: true
-});
+mongoose.connect('mongodb://bobeksob:grzesiek97!@ds161780.mlab.com:61780/taskkodilla');
 
 //new user Schema
 const userSchema = new Schema({
@@ -78,7 +76,7 @@ const findAllUsers = function() {
     // find all users
     return User.find({}, function(err, res) {
         if (err) throw err;
-        console.log('Actual database records are ' + res);
+        //console.log('Actual database records are ' + res);
     });
 }
 
@@ -86,7 +84,7 @@ const findSpecificRecord = function() {
     // find specific record
     return User.find({ username: 'Kenny_the_boy' }, function(err, res) {
         if (err) throw err;
-        console.log('Record you are looking for is ' + res);
+        //console.log('Record you are looking for is ' + res);
     })
 }
 
