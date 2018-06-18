@@ -25,14 +25,13 @@ userSchema.methods.manify = function(next) {
 userSchema.pre('save', function(next) {
     //pobranie aktualnego czasu
     const currentDate = new Date();
-
-    //zmiana pola na aktualny czas
     
+    //zmiana pola na aktualny czas
+
     this.updated_at = currentDate;
 
     if (!this.created_at)
         this.created_at = currentDate;
-
     next();
 });
 
